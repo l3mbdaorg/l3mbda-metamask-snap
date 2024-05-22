@@ -170,7 +170,7 @@ export const onUserInput: OnUserInputHandler = async ({ id, event }) => {
         }
 
         try {
-            const r = await fetch(`${process.env.API_HOST}/api/oracles`, {
+            const r = await fetch(`${process.env.API_HOST}/api/oracles/simple`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
