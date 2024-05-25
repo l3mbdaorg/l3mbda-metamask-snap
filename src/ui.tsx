@@ -13,7 +13,6 @@ import {
     text,
 } from '@metamask/snaps-sdk'
 
-import {} from '@metamask/snaps-sdk/dist/types/ui/nodes'
 import { EVENT_NAMES, type NewOracle, type Oracle, type OracleError } from './constants'
 
 export async function buildHome() {
@@ -30,7 +29,7 @@ export async function buildHome() {
         const ui = panel([
             heading('Welcome to L3MBDA 👋'),
             text(
-                'Open up [l3mbda.com](https://l3mbda.com) and connect your Metamask to get started!'
+                'Open up [l3mbda.com](https://l3mbda.com/integrations) and connect your Metamask to get started!'
             ),
         ])
 

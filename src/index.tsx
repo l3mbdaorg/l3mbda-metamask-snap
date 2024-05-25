@@ -94,7 +94,7 @@ export const onUserInput: OnUserInputHandler = async ({ id, event }) => {
             assert(snapState?.jwt, 'No jwt found in Snap state.')
             const jwt = snapState.jwt as string
 
-            await fetch(`${process.env.API_HOST}/api/oracles/${oracleId}`, {
+            await fetch(`${process.env.API_HOST}/api/oracle/${oracleId}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
@@ -170,7 +170,7 @@ export const onUserInput: OnUserInputHandler = async ({ id, event }) => {
         }
 
         try {
-            const r = await fetch(`${process.env.API_HOST}/api/oracles/simple`, {
+            const r = await fetch(`${process.env.API_HOST}/api/oracle`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -184,16 +184,16 @@ export const onUserInput: OnUserInputHandler = async ({ id, event }) => {
                 }),
             }).then((res) => res.json())
 
-            if (r.serverError) {
+            if (r?.serverError) {
                 return showForm(id, { title: 'Error', message: r.serverError })
             }
-
+			
             const newOracle: Oracle = {
                 id: r.id,
                 name: oracle.name,
                 event: oracle.event,
                 filters: filters,
-                emoji: r.emoji,
+                emoji: '🦊', //r.emoji,
                 notifications: [],
             }
 
@@ -238,14 +238,6 @@ export const onUserInput: OnUserInputHandler = async ({ id, event }) => {
         })
 
         return showJwtForm(id)
-
-        // API call with action type = metamask (hono filters the response and sends ok if filters match, so we can scan by svix logs status)
-        // Get back 200 response or error
-        // Displays success screen or error
-        // Store Oracle `endpoint_id`
-        // Cron to scan every minute for 200 logs with `endpoint_id`
-
-        // return showResult(id, JSON.stringify(newOracle, null, 2))
     }
 }
 
@@ -270,7 +262,7 @@ export const onCronjob: OnCronjobHandler = async ({ request }) => {
             for (const oracle of oracles) {
                 console.log('updating oracle', oracle.id)
 
-                const r = await fetch(`${process.env.API_HOST}/api/oracles/${oracle.id}/logs`, {
+                const r = await fetch(`${process.env.API_HOST}/api/oracle/${oracle.id}/logs`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',

@@ -1,17 +1,18 @@
 {
-  "version": "0.1.0",
-  "description": "An example Snap.",
-  "proposedName": "Snapy",
+  "version": "1.0.0",
+  "description": "This Snap enhances 🦊 Metamask with the functionality of L3MBDA. It enables you to create Oracles and receive alerts right in your browser!\nAfter installing the Snap, please visit the website to connect with MetaMask.",
+  "proposedName": "L3MBDA Alerts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MetaMask/template-snap-monorepo.git"
+    "url": "https://github.com/l3mbdaorg/metamask-snap.git"
   },
   "source": {
-    "shasum": "uAlpxctGjj8H58hwJPCTsO+abBSBSeqXM9ec23He41g=",
+    "shasum": "Rdu2k//ziFqIe1ak2R5hlvSmuPVi1YtmdhAN7+Sk+ow=",
     "location": {
       "npm": {
         "filePath": "dist/bundle.js",
-        "packageName": "snap",
+        "iconPath": "assets/logo.svg",
+        "packageName": "metamask-snap",
         "registry": "https://registry.npmjs.org/"
       }
     }
