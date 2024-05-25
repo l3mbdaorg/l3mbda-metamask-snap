@@ -180,7 +180,8 @@ export const onUserInput: OnUserInputHandler = async ({ id, event }) => {
                     name: oracle.name,
                     event: oracle.event,
                     filters: filters,
-                    action: 'metamask',
+                    action: 'webhook',
+                    destination: 'https://awasda.asdda.adaad',
                 }),
             }).then((res) => res.json())
 
