@@ -1,17 +1,15 @@
 {
     "name": "metamask-snap",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "description": "Ultimate Web3 Automation",
+    "homepage": "https://l3mbda.com/integrations",
     "repository": {
         "type": "git",
         "url": "https://github.com/l3mbdaorg/metamask-snap.git"
     },
-    "license": "(MIT-0 OR Apache-2.0)",
+    "license": "Apache-2.0",
     "main": "./dist/bundle.js",
-    "files": [
-        "dist/",
-        "snap.manifest.json"
-    ],
+    "files": ["dist/", "snap.manifest.json", "assets/"],
     "scripts": {
         "allow-scripts": "yarn workspace root allow-scripts",
         "build": "mm-snap build",
