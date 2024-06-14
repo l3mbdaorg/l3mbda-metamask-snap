@@ -1,18 +1,18 @@
 {
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "This Snap enhances 🦊 Metamask with the functionality of L3MBDA. It enables you to create Oracles and receive alerts right in your browser!\nAfter installing the Snap, please visit the website to connect with MetaMask.",
   "proposedName": "L3MBDA Alerts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/l3mbdaorg/metamask-snap.git"
+    "url": "https://github.com/l3mbdaorg/l3mbda-metamask-snap.git"
   },
   "source": {
-    "shasum": "P82f3uuJjWn30u5bDZzMmsjPJe8PSLsoAzwILEVfy+4=",
+    "shasum": "5BmZMz60S1Orut4Db8Y03j0te3+CIgwVhJvmhvcMFng=",
     "location": {
       "npm": {
         "filePath": "dist/bundle.js",
         "iconPath": "assets/logo.svg",
-        "packageName": "metamask-snap",
+        "packageName": "@l3mbda/metamask-snap",
         "registry": "https://registry.npmjs.org/"
       }
     }
