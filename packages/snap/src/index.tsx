@@ -94,7 +94,7 @@ export const onUserInput: OnUserInputHandler = async ({ id, event }) => {
             assert(snapState?.jwt, 'No jwt found in Snap state.')
             const jwt = snapState.jwt as string
 
-            await fetch(`${process.env.API_HOST}/api/oracle/${oracleId}`, {
+            await fetch(`${process.env.API_HOST}/api/oracles/${oracleId}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
@@ -170,7 +170,7 @@ export const onUserInput: OnUserInputHandler = async ({ id, event }) => {
         }
 
         try {
-            const r = await fetch(`${process.env.API_HOST}/api/oracle`, {
+            const r = await fetch(`${process.env.API_HOST}/api/oracles/simple`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -263,7 +263,7 @@ export const onCronjob: OnCronjobHandler = async ({ request }) => {
             for (const oracle of oracles) {
                 console.log('updating oracle', oracle.id)
 
-                const r = await fetch(`${process.env.API_HOST}/api/oracle/${oracle.id}/logs`, {
+                const r = await fetch(`${process.env.API_HOST}/api/oracles/${oracle.id}/logs`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
