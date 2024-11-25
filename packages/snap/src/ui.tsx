@@ -182,7 +182,7 @@ export async function showForm(id: string, error?: OracleError) {
             )
             break
         }
-        case 'eth-transfer': {
+        case 'native-transfer': {
             inputs.push(
                 input({
                     label: 'AMOUNT (Minimum)',
@@ -281,7 +281,7 @@ export async function showEventForm(id: string) {
                 heading('Create New Oracle'),
                 text('Please pick the event you want to subscribe to:'),
                 button('ERC20 Transfer', ButtonType.Button, 'erc20-transfer'),
-                button('ETH Transfer', ButtonType.Button, 'eth-transfer'),
+                button('Native Transfer', ButtonType.Button, 'native-transfer'),
                 button('ERC721 Transfer', ButtonType.Button, 'erc721-transfer'),
                 button('ERC1155 Transfer', ButtonType.Button, 'erc1155-transfer'),
                 button({ value: 'Go back', variant: 'secondary', name: 'home' }),

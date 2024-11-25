@@ -1,8 +1,8 @@
-export const EVENTS = ['erc20-transfer', 'eth-transfer', 'erc721-transfer', 'erc1155-transfer']
+export const EVENTS = ['erc20-transfer', 'native-transfer', 'erc721-transfer', 'erc1155-transfer']
 export const FILTER_KEYS = ['from', 'to', 'token', 'amount', 'value']
 export const EVENT_NAMES = {
     'erc20-transfer': 'ERC20 Transfer',
-    'eth-transfer': 'ETH Transfer',
+    'native-transfer': 'Native Transfer',
     'erc721-transfer': 'ERC721 Transfer',
     'erc1155-transfer': 'ERC1155 Transfer',
 }

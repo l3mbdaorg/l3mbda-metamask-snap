@@ -178,10 +178,10 @@ export const onUserInput: OnUserInputHandler = async ({ id, event }) => {
                 },
                 body: JSON.stringify({
                     name: oracle.name,
+                    description: 'Metamask & L3MBDA Integration',
                     event: oracle.event,
                     filters: filters,
                     action: 'metamask',
-                    destination: 'metamask',
                 }),
             }).then((res) => res.json())
 
